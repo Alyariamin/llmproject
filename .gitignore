@@ -1,0 +1,69 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Django
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media/
+static/
+*.pot
+
+# SQLite database files
+*.db
+*.sqlite3
+
+# Pipenv
+.env
+.venv
+venv/
+ENV/
+env/
+Pipfile.lock
+# Note: You might want to keep Pipfile.lock for production consistency
+# If you want to keep it, comment out the line above
+
+# Virtual Environment
+.python-version
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Project specific
+/media/
+/static/
+/staticfiles/
+*.log
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Django migrations (uncomment if you want to ignore migration files)
+# */migrations/*.py
+# !*/migrations/__init__.py
+
+# Docker
+.dockerignore
+docker-compose.override.yml
+
+# Tests
+.coverage
+htmlcov/
+.tox/
+.pytest_cache/

@@ -1,0 +1,24 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "*"
+numpy = "*"
+scikit-learn = "*"
+djangorestframework = "*"
+python-dotenv = "*"
+langchain = "*"
+langchain-openai = "*"
+openai = "*"
+django-redis = "*"
+redis = "*"
+celery = "*"
+langchain-community = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.13"
+python_full_version = "3.13.12"

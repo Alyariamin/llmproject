@@ -1,13 +1,6 @@
 # 🚀 Django + Redis + Celery + Docker Project
 
-This project is a Dockerized Django backend using:
-
-- Django
-- Redis
-- Celery
-- SQLite (development)
-- OpenRouter API
-- Docker & Docker Compose
+This project implements a question-answering system that retrieves and answers user questions based on relevant documents. It uses TF-IDF to find the most related documents and leverages the liquid/lfm-2.5-1.2b-thinking:free model to generate accurate and context-aware answers. Designed to be fully Dockerized with Django, Redis, and Celery, the system supports asynchronous processing and fast query handling.
 
 ---
 

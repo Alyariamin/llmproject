@@ -47,6 +47,49 @@ http://localhost:8000
 
 ---
 
+
+## 👤 Create Superuser for Admin Panel
+
+To access Django admin:
+
+```bash
+docker compose exec web python manage.py createsuperuser
+```
+---
+
+
+- Admin panel URL: [http://localhost:8000/admin/](http://localhost:8000/admin/)
+- Search URL: [http://localhost:8000/search/](http://localhost:8000/search/)
+
+---
+## 🔍 Search API
+
+You can send POST requests to the search endpoint:
+
+```
+http://localhost:8000/search/
+```
+
+### Request Format (JSON)
+
+```json
+{
+  "question": "my question"
+}
+```
+
+### Example using `curl`
+
+```bash
+curl -X POST http://localhost:8000/search/ \
+  -H "Content-Type: application/json" \
+  -d '{"question": "What is Django?"}'
+```
+
+The response will contain the answer returned by the OpenRouter API (via your backend logic).
+
+---
+
 ## 🛑 Stop the Project
 
 ```bash

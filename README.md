@@ -29,8 +29,6 @@ OPENROUTER_API_KEY=your_openrouter_api_key
 REDIS_HOST=redis
 ```
 
-⚠️ Do NOT commit your `.env` file.
-
 ---
 
 ## 🐳 Run with Docker
@@ -45,16 +43,6 @@ The app will be available at:
 
 ```
 http://localhost:8000
-```
-
----
-
-## 🗄 Run Migrations
-
-If migrations are not automatic:
-
-```bash
-docker compose exec web python manage.py migrate
 ```
 
 ---

@@ -1,12 +1,13 @@
+from .models import Document, Survey
+from .serializers import DocumentSerializer
+from .retriever import TFIDFRetriever
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.viewsets import ModelViewSet
-from .models import Document, Survey
-from .serializers import DocumentSerializer
 from langchain_classic.chains import RetrievalQA
-from .retriever import TFIDFRetriever
 from langchain_openai import ChatOpenAI
+from django.conf import settings
 
 class DocumentViewSet(ModelViewSet):
     queryset = Document.objects.all()
@@ -27,7 +28,7 @@ class LangChainQAAPIView(APIView):
 
         llm = ChatOpenAI(
             model="liquid/lfm-2.5-1.2b-thinking:free",
-            openai_api_key="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",
+            openai_api_key=settings.OPENROUTER_API_KEY,
             openai_api_base="https://openrouter.ai/api/v1",
             temperature=0.2,
         )

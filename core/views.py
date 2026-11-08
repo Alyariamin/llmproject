@@ -27,7 +27,7 @@ class LangChainQAAPIView(APIView):
         retriever = TFIDFRetriever()
 
         llm = ChatOpenAI(
-            model="liquid/lfm-2.5-1.2b-thinking:free",
+            model="liquid/lfm-2.5-2.6b:free",
             openai_api_key=settings.OPENROUTER_API_KEY,
             openai_api_base="https://openrouter.ai/api/v1",
             temperature=0.2,
